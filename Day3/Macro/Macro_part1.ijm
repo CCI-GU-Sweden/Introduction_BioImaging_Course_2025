@@ -1,0 +1,18 @@
+run("Bio-Formats Importer", "open=[D:/DATA/Simon/Imaging_FiJi_course 2025/2_22.tif] autoscale color_mode=Default rois_import=[ROI manager] view=Hyperstack stack_order=XYCZT");
+run("Z Project...", "projection=[Max Intensity]");
+rename("ZProj");
+run("Cyan");
+//run("Brightness/Contrast...");
+run("Enhance Contrast", "saturated=0.35");
+run("Next Slice [>]");
+run("Enhance Contrast", "saturated=0.35");
+run("Yellow");
+run("Next Slice [>]");
+run("Enhance Contrast", "saturated=0.35");
+run("Grays");
+run("Next Slice [>]");
+run("Enhance Contrast", "saturated=0.35");
+run("Green");
+run("Next Slice [>]");
+run("Enhance Contrast", "saturated=0.35");
+run("Magenta");
